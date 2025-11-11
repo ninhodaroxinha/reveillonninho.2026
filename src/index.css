@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* New Year's Eve Theme - Warm, Elegant, Festive */
+    --background: 0 0% 100%;
+    --foreground: 280 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 280 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 50% 10%;
+
+    /* Burgundy primary color for elegant feel */
+    --primary: 356 33% 30%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 356 33% 45%;
+
+    /* Purple accent for elegance */
+    --secondary: 280 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 30% 95%;
+    --muted-foreground: 280 20% 40%;
+
+    /* Deep purple accent */
+    --accent: 280 50% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 40% 90%;
+    --input: 45 40% 90%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.75rem;
+
+    /* Custom New Year's tokens */
+    --gold: 356 33% 30%;
+    --gold-light: 356 33% 45%;
+    --gold-dark: 356 33% 20%;
+    --purple: 280 60% 50%;
+    --purple-dark: 280 50% 30%;
+    --champagne: 45 60% 90%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(356 33% 30%) 0%, hsl(356 33% 45%) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(280 60% 50%) 0%, hsl(280 50% 40%) 100%);
+    --gradient-festive: linear-gradient(135deg, hsl(280 60% 50%) 0%, hsl(356 33% 30%) 100%);
+    --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+
+    /* Shadows */
+    --shadow-glow: 0 10px 40px hsl(356 33% 30% / 0.3);
+    --shadow-purple: 0 10px 40px hsl(280 60% 50% / 0.3);
+    --shadow-elegant: 0 20px 60px rgba(0,0,0,0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 280 50% 5%;
+    --foreground: 45 60% 95%;
+
+    --card: 280 40% 10%;
+    --card-foreground: 45 60% 95%;
+
+    --popover: 280 40% 10%;
+    --popover-foreground: 45 60% 95%;
+
+    --primary: 356 33% 30%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 356 33% 45%;
+
+    --secondary: 280 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 280 40% 15%;
+    --muted-foreground: 45 40% 70%;
+
+    --accent: 280 50% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 40% 20%;
+    --input: 280 40% 20%;
+    --ring: 45 100% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
